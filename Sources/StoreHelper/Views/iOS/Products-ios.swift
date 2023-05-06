@@ -76,7 +76,10 @@ public struct Products: View {
                     ContactUsView()
                     
                 }, label: {
-                    Label("Manage Purchases", systemImage: "creditcard.circle")
+                    Text("Manage Purchases")
+                        .font(.custom("WorkSans-Regular", size: 15))
+                    Image(systemName: "creditcard.circle")
+//                    Label("Manage Purchases", systemImage: "creditcard.circle")
                 })
                 .padding()
                 
