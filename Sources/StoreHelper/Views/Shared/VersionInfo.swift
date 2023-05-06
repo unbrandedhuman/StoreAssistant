@@ -50,7 +50,7 @@ public struct VersionInfo: View {
             
             if let version = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") { versionInfo = "\(version as? String ?? "Unknown")" }
             if let build = Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") { buildInfo = "\(build as? String ?? "Unknown")" }
-            if let codeName = Bundle.main.object(forInfoDictionaryKey: "CODENAME") { codeName = "\(code as? String ?? "Unknown")" }
+            if let codename = Bundle.main.object(forInfoDictionaryKey: "CODENAME") { codeName = "\(codename as? String ?? "Unknown")" }
         }
     }
 }
