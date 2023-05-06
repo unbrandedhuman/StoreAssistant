@@ -20,7 +20,7 @@
 Jump to the [Quick Start](https://github.com/russell-archer/StoreHelper/blob/main/Documentation/quickstart.md) guide.
 
 # Recent Major Changes
-May 6th - 2023: Created Store Assistant to create a simple way to interact with StoreKit.
+May 6th, 2023: Created Store Assistant to create a simple way to interact with StoreKit.
     
 ---
 
@@ -49,4 +49,4 @@ as part of commercial software.
 
 ## Requirements
 
-It uses `StoreKit2`, on **iOS 15** or later, **macOS 12** or later, and **Xcode 13** or later..
+It uses `StoreKit2`, on **iOS 15** or later, **macOS 12** or later, and **Xcode 13** or later. Also uses the Work Sans font.
