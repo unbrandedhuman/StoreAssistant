@@ -27,7 +27,12 @@ public struct SheetBarView: View {
         HStack {
             ZStack {
                 if let img = sysImg { Label(title ?? "", systemImage: img).padding(insetsTitle)}
-                else if let t = title { Text(t).padding(insetsTitle)}
+                else if let t = title { 
+                    Text(t)
+                        .padding(insetsTitle)
+                        .font(.custom("WorkSans-Regular", size: 20))
+                
+                }
                 
                 HStack {
                     Spacer()
