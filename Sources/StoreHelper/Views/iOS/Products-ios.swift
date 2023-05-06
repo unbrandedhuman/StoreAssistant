@@ -71,9 +71,9 @@ public struct Products: View {
                 DisclosureGroup(isExpanded: $textExpanded, content: {
                     
                     RestorePurchasesView()
-                    RefreshProductsView()
-                    RedeemOfferCodeView(showRedeemOfferCodeButton: $showRedeemOfferCodeButton, showRedeemOfferCodeError: $showRedeemOfferCodeError)
-                    ContactUsView()
+//                    RefreshProductsView()
+//                    RedeemOfferCodeView(showRedeemOfferCodeButton: $showRedeemOfferCodeButton, showRedeemOfferCodeError: $showRedeemOfferCodeError)
+//                    ContactUsView()
                     
                 }, label: {
                     Text("Manage Purchases")
