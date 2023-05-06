@@ -13,6 +13,7 @@ public struct VersionInfo: View {
     @State private var appName = ""
     @State private var versionInfo = ""
     @State private var buildInfo = ""
+    @State private var codeName = ""
     
     let insets = EdgeInsets(top: 0, leading: 2, bottom: 1, trailing: 1)
     
@@ -22,12 +23,16 @@ public struct VersionInfo: View {
         VStack {
             Spacer()
             HStack {
-                // StoreHelper will look for an image named "AppStoreIcon" in your asset catalog
-                Image("AppStoreIcon").resizable().frame(width: 75, height: 75)
+                // We'll check for an icon here.
+                Image("openai").resizable().frame(width: 75, height: 75)
                 
                 VStack {
-                    SubHeadlineFont(scaleFactor: storeHelper.fontScaleFactor) { Text("\(appName) version \(versionInfo)")}.padding(insets)
-                    SubHeadlineFont(scaleFactor: storeHelper.fontScaleFactor) { Text("Build \(buildInfo)")}.padding(insets)
+                    Text("\(appName) version \(versionInfo)")
+                        .padding(insets)
+                        .font(.custom("WorkSans-Regular", size: 12))
+                    Text("Build \(buildInfo) ")
+                        .font(.custom("WorkSans-Regular", size: 9))
+                        .padding(insets)
                 }
             }
             .padding()
@@ -42,6 +47,7 @@ public struct VersionInfo: View {
             
             if let version = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") { versionInfo = "\(version as? String ?? "Unknown")" }
             if let build = Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") { buildInfo = "\(build as? String ?? "Unknown")" }
+            if let codeName = Bundle.main.object(forInfoDictionaryKey: "CODENAME") { codeName = "\(code as? String ?? "Unknown")" }
         }
     }
 }
