@@ -68,7 +68,6 @@ public struct ProductView: View {
                 .padding(5)
                 .padding(EdgeInsets(top: 0, leading: 5, bottom: 3, trailing: 5))
                 .multilineTextAlignment(.center)
-                .foregroundColor(.secondary)
                 .contentShape(Rectangle())
                 .onTapGesture { productInfoCompletion(productId) }
     
@@ -76,7 +75,6 @@ public struct ProductView: View {
                 .font(.custom("WorkSans-Regular", size: 12))
                 .padding(EdgeInsets(top: 0, leading: 5, bottom: 3, trailing: 5))
                 .multilineTextAlignment(.center)
-                .foregroundColor(.secondary)
                 .contentShape(Rectangle())
                 .onTapGesture { productInfoCompletion(productId) }
             
