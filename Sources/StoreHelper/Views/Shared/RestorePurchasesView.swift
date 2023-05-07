@@ -24,7 +24,7 @@ public struct RestorePurchasesView: View {
                     title: { 
                         BodyFont(scaleFactor: storeHelper.fontScaleFactor) { 
                            Text(restorePurchasesButtonText)
-                           .font(.custom("WorkSans-Regular", size: 9))
+                           .font(.custom("WorkSans-Regular", size: 16))
                         }.padding([.top, .bottom, .trailing])
                     }, icon:  { 
                         Image(systemName: "purchased").bodyImageNotRounded().frame(height: 24).padding(.leading)
