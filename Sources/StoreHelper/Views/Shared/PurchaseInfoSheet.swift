@@ -61,7 +61,7 @@ public struct PurchaseInfoSheet: View {
                     
                     VStack {
                         PurchaseInfoFieldView(fieldName: "Product name:", fieldValue: epi.name)
-                        PurchaseInfoFieldView(fieldName: "Product ID:", fieldValue: epi.productId)
+//                        PurchaseInfoFieldView(fieldName: "Product ID:", fieldValue: epi.productId)
                         PurchaseInfoFieldView(fieldName: "Price:", fieldValue: epi.purchasePrice ?? "Unknown")
                         
                         if epi.productType == .nonConsumable {
