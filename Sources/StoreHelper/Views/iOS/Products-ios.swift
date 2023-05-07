@@ -66,7 +66,6 @@ public struct Products: View {
         ScrollView {
             VStack {
                 ProductListView(showRefundSheet: $showRefundSheet, refundRequestTransactionId: $refundRequestTransactionId, signPromotionalOffer: signPromotionalOffer, productInfoCompletion: productInfoCompletion)
-                TermsOfServiceAndPrivacyPolicyView().padding(.top)
                 
                 DisclosureGroup(isExpanded: $textExpanded, content: {
                     
@@ -101,6 +100,8 @@ public struct Products: View {
             .alert(refundAlertText, isPresented: $showRefundAlert) { Button("OK") { showRefundAlert.toggle() }}
             .alert("Unable to redeem offer code", isPresented: $showRedeemOfferCodeError) { Button("OK") { showRedeemOfferCodeError.toggle() }}
             .task { canMakePayments = AppStore.canMakePayments }
+            
+            TermsOfServiceAndPrivacyPolicyView().padding(.top)
             
             VersionInfo()
         }
