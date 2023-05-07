@@ -63,8 +63,17 @@ public struct ProductView: View {
     
     public var body: some View {
         VStack {
-            LargeTitleFont(scaleFactor: storeHelper.fontScaleFactor) { Text(displayName)}.padding(5)
-            SubHeadlineFont(scaleFactor: storeHelper.fontScaleFactor) { Text(description)}
+            Text(displayName)
+                .font(.custom("WorkSans-Regular", size: 26))
+                .padding(5)
+                .padding(EdgeInsets(top: 0, leading: 5, bottom: 3, trailing: 5))
+                .multilineTextAlignment(.center)
+                .foregroundColor(.secondary)
+                .contentShape(Rectangle())
+                .onTapGesture { productInfoCompletion(productId) }
+    
+            Text(description)
+                .font(.custom("WorkSans-Regular", size: 12))
                 .padding(EdgeInsets(top: 0, leading: 5, bottom: 3, trailing: 5))
                 .multilineTextAlignment(.center)
                 .foregroundColor(.secondary)
