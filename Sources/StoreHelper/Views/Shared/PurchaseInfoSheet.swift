@@ -112,10 +112,10 @@ public struct PurchaseInfoSheet: View {
 //                     .onTapGesture { withAnimation { showManagePurchase.toggle() }}
 //                     .padding(EdgeInsets(top: 0, leading: 20, bottom: 5, trailing: 20))
                     
-                    CaptionFont(scaleFactor: storeHelper.fontScaleFactor) { Text("You may request a refund from the App Store if a purchase does not perform as expected. This requires you to authenticate with the App Store. Note that this app does not have access to credentials used to sign-in to the App Store.")}
-                        .multilineTextAlignment(.center)
-                        .foregroundColor(.secondary)
-                        .padding()
+//                     CaptionFont(scaleFactor: storeHelper.fontScaleFactor) { Text("You may request a refund from the App Store if a purchase does not perform as expected. This requires you to authenticate with the App Store. Note that this app does not have access to credentials used to sign-in to the App Store.")}
+//                         .multilineTextAlignment(.center)
+//                         .foregroundColor(.secondary)
+//                         .padding()
                     
                 } else {
                     VStack {
