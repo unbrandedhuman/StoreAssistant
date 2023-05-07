@@ -63,7 +63,7 @@ public struct Products: View {
     }
     
     @ViewBuilder public var body: some View {
-        ScrollView {
+        //ScrollView {
             VStack {
                 ProductListView(showRefundSheet: $showRefundSheet, refundRequestTransactionId: $refundRequestTransactionId, signPromotionalOffer: signPromotionalOffer, productInfoCompletion: productInfoCompletion)
                 TermsOfServiceAndPrivacyPolicyView().padding(.top)
@@ -105,6 +105,6 @@ public struct Products: View {
             VersionInfo()
         }
         .refreshable { storeHelper.refreshProductsFromAppStore(rebuildCaches: true) }
-    }
+    //}
 }
 #endif
