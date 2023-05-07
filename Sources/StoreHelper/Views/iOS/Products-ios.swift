@@ -88,7 +88,7 @@ public struct Products: View {
                     SubHeadlineFont(scaleFactor: storeHelper.fontScaleFactor) { Text("Purchases are not permitted on your device.")}.foregroundColor(.secondary)
                 }
             }
-            .navigationBarTitle("Available Products", displayMode: .inline)
+//             .navigationBarTitle("Available Products", displayMode: .inline)
             .toolbar { PurchaseManagement() }
             .refundRequestSheet(for: refundRequestTransactionId, isPresented: $showRefundSheet) { refundRequestStatus in
                 switch(refundRequestStatus) {
