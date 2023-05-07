@@ -41,7 +41,10 @@ public struct ProductListViewRow: View {
     #endif
     
     public var body: some View {
-        Section(header: BodyFont(scaleFactor: storeHelper.fontScaleFactor) { Text(headerText).padding()}) {
+        Section(header: BodyFont(scaleFactor: storeHelper.fontScaleFactor) { 
+            Text(headerText).padding()
+               .font(.custom("WorkSans-Bold", size: 22))
+        }) {
             if let p = products.first {
                 if p.type == .consumable {
                     ForEach(products, id: \.id) { product in
