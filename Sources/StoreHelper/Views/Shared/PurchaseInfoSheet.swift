@@ -80,42 +80,42 @@ public struct PurchaseInfoSheet: View {
                     
                     Divider().padding(.bottom)
                     
-//                     DisclosureGroup(isExpanded: $showManagePurchase, content: {
-//                         #if os(iOS)
-//                         Button(action: {
-//                             if Utils.isSimulator() { StoreLog.event("Warning: You cannot request refunds from the simulator. You must use the sandbox environment.")}
-//                             if let tid = epi.transactionId {
-//                                 refundRequestTransactionId = tid
-//                                 withAnimation { showRefundSheet.toggle()}
-//                             }
-//                         }) {
-//                             Label(title: { BodyFont(scaleFactor: storeHelper.fontScaleFactor) { Text("Request Refund")}.padding()},
-//                                   icon:  { Image(systemName: "creditcard.circle").bodyImageNotRounded().frame(height: 24)})
-//                         }
-//                         .xPlatformButtonStyleBorderedProminent()
-//                         .padding()
-//                         #else
-//                         Button(action: {
-//                             if  let sRefundUrl = Configuration.requestRefundUrl.stringValue(storeHelper: storeHelper),
-//                                 let refundUrl = URL(string: sRefundUrl) {
-//                                 NSWorkspace.shared.open(refundUrl)
-//                             }
-//                         }) { Label("Request Refund", systemImage: "creditcard.circle")}
-//                             .xPlatformButtonStyleBorderedProminent()
-//                             .padding()
-//                         #endif
+                    DisclosureGroup(isExpanded: $showManagePurchase, content: {
+                        #if os(iOS)
+                        Button(action: {
+                            if Utils.isSimulator() { StoreLog.event("Warning: You cannot request refunds from the simulator. You must use the sandbox environment.")}
+                            if let tid = epi.transactionId {
+                                refundRequestTransactionId = tid
+                                withAnimation { showRefundSheet.toggle()}
+                            }
+                        }) {
+                            Label(title: { BodyFont(scaleFactor: storeHelper.fontScaleFactor) { Text("Request Refund")}.padding()},
+                                  icon:  { Image(systemName: "creditcard.circle").bodyImageNotRounded().frame(height: 24)})
+                        }
+                        .xPlatformButtonStyleBorderedProminent()
+                        .padding()
+                        #else
+                        Button(action: {
+                            if  let sRefundUrl = Configuration.requestRefundUrl.stringValue(storeHelper: storeHelper),
+                                let refundUrl = URL(string: sRefundUrl) {
+                                NSWorkspace.shared.open(refundUrl)
+                            }
+                        }) { Label("Request Refund", systemImage: "creditcard.circle")}
+                            .xPlatformButtonStyleBorderedProminent()
+                            .padding()
+                        #endif
                         
-//                     }) {
-//                         Label(title: { BodyFont(scaleFactor: storeHelper.fontScaleFactor) { Text("Manage Purchase")}.padding()},
-//                               icon:  { Image(systemName: "creditcard.circle").bodyImageNotRounded().frame(height: 24)})
-//                     }
-//                     .onTapGesture { withAnimation { showManagePurchase.toggle() }}
-//                     .padding(EdgeInsets(top: 0, leading: 20, bottom: 5, trailing: 20))
+                    }) {
+                        Label(title: { BodyFont(scaleFactor: storeHelper.fontScaleFactor) { Text("Manage Purchase")}.padding()},
+                              icon:  { Image(systemName: "creditcard.circle").bodyImageNotRounded().frame(height: 24)})
+                    }
+                    .onTapGesture { withAnimation { showManagePurchase.toggle() }}
+                    .padding(EdgeInsets(top: 0, leading: 20, bottom: 5, trailing: 20))
                     
-//                     CaptionFont(scaleFactor: storeHelper.fontScaleFactor) { Text("You can request a refund if Bolt doesn't work out as expected. Macie doesn't collect your Apple ID and password.")}
-//                         .multilineTextAlignment(.center)
-//                         .foregroundColor(.secondary)
-//                         .padding()
+                    CaptionFont(scaleFactor: storeHelper.fontScaleFactor) { Text("You can request a refund if Bolt doesn't work out as expected. Macie doesn't collect your Apple ID and password.")}
+                        .multilineTextAlignment(.center)
+                        .foregroundColor(.secondary)
+                        .padding()
                     
                 } else {
                     VStack {
